@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyFristProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+27a6c67593ec52de9a5af1ddca4af5a033e1d15c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df87b7da48f83381f77e62c93df2d1a53b5478e4")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyFristProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyFristProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
