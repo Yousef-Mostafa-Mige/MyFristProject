@@ -5,6 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.IdentityModel.Tokens.Experimental;
 using MyFristProject.Data;
 using MyFristProject.services;
+using MyFristProject.Services;
 using Scalar.AspNetCore;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
@@ -15,6 +16,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySQL(builder.Configuration.GetConnectionString("DefaultConnection")!);
 });
 builder.Services.AddScoped<Iservices,Services>();
+builder.Services.AddScoped<IProdect, ProdectServices>();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(option =>
 {
     option.TokenValidationParameters = new TokenValidationParameters
