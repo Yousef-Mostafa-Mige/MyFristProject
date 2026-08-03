@@ -15,7 +15,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseMySQL(builder.Configuration.GetConnectionString("DefaultConnection")!);
 });
-builder.Services.AddScoped<Iservices,Services>();
+builder.Services.AddScoped<Iservices,Servicesuser>();
 builder.Services.AddScoped<IProdect, ProdectServices>();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(option =>
 {

@@ -10,7 +10,7 @@ using MyFristProject.Dots;
 using MyFristProject.Entity;
 namespace MyFristProject.services
 {
-    public class Services(AppDbContext Context, IConfiguration Configuration) : Iservices
+    public class Servicesuser(AppDbContext Context, IConfiguration Configuration) : Iservices
     {
 
         public async Task<User> Register(UserDot requst)
@@ -126,6 +126,19 @@ namespace MyFristProject.services
                 return null;
             }
             return await createrespons(user);
+        }
+        public async Task<UserDot> GetByIduser(int id)
+        {
+            var prodect = await Context.Users.FirstOrDefaultAsync(u => u.Id == id);
+            if (prodect is null)
+            {
+                return null!;
+            }
+            return new UserDot
+            {
+                Username = prodect.Username,
+                Password = string.Empty
+            };
         }
     }
 }

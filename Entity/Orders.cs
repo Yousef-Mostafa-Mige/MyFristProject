@@ -1,3 +1,5 @@
+using MyFristProject.Dots;
+
 namespace MyFristProject.Entity
 {
     public class Orders
@@ -5,8 +7,8 @@ namespace MyFristProject.Entity
         public int Id { get; set; }
         public int UserId { get; set; }
         public User User { get; set; } = new User();
-        public int ProductId { get; set; }
+        public int ProdectId { get; set; }
         public Prodect Product { get; set; } = new Prodect();
-        public DateTime OrderDate { get; set; }
+        public DateTime time { get; set; } = DateTime.Now;
     }
 }

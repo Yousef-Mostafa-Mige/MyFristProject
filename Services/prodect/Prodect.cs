@@ -30,6 +30,20 @@ namespace MyFristProject.Services
             }
             return prodect!;
         }
+        public async Task<ProdectDto> GetByNameProdects(string name)
+        {
+            var prodect = await Context.Products.FirstOrDefaultAsync(u => u.Name == name);
+            if (prodect is null)
+            {
+                return null!;
+            }
+            return new ProdectDto
+            {
+                Name = prodect.Name,
+                Price = prodect.Price
+                
+            };
+        }
 
 
         public async Task<List<Prodect>> GetProdects()
